@@ -1,0 +1,173 @@
+$color-primary: #db0a5b;
+$color-secondary: #2e3131;
+$color-light: #ecf0f1;
+
+body {
+  background-color: $color-light;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Patua One', cursive;
+  margin: 0 0 .25em 0;
+}
+
+strong {
+  font-weight: 800;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+.align-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.color-scheme-primary {
+  background-color: $color-primary;
+  color: $color-light;
+
+  a {
+    color: $color-light;
+  }
+}
+
+.color-scheme-secondary {
+  background-color: $color-secondary;
+  color: $color-light;
+
+  a {
+    color: $color-light;
+  }
+}
+
+.color-scheme-light {
+  background-color: $color-light;
+  color: $color-secondary;
+
+  a {
+    color: $color-secondary;
+  }
+}
+
+main {
+  height: 100vh;
+
+  .zip-effect {
+    border-right: 3px dotted $color-primary;
+  }
+
+  #portrait {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 10px solid $color-light;
+    //border: 10px solid $color-primary;
+    background-image: url("../images/portrait-small-fuchsia.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  #introduction {
+    text-align: center;
+    padding: 30px;
+
+    h1 {
+      font-size: 4em;
+      font-weight: 400;
+
+      span {
+        background-color: $color-light;
+        color: $color-primary;
+        padding: 0 .25em;
+      }
+    }
+
+    h2 {
+      margin: .5em 0;
+      font-size: 1.25em;
+      font-weight: 300;
+    }
+  }
+
+  #arrow-down a {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    margin: 0 0 .75em -.5em;
+    border-radius: 50%;
+    background-color: rgba(236, 240, 241, 0.25);
+    color: $color-light;
+    font-size: 2.5em;
+    text-align: center;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+      transition: all ease-in-out .25s;
+    }
+  }
+}
+
+section#work {
+  height: 75vh;
+  font-size: 1.2em;
+  text-align: center;
+
+  #about-me {
+    a {
+      font-weight: 800;
+      border-bottom: 1px solid $color-secondary;
+
+      &:hover {
+        color: $color-primary;
+        border-color: $color-primary;
+        transition: all ease-in-out .25s;
+      }
+    }
+  }
+
+  #social-media {
+    margin: 2em 0 0 0;
+
+    a {
+      margin: 5px;
+      font-size: 2em;
+      color: $color-primary;
+
+      &:hover {
+        color: $color-secondary;
+        transition: all ease-in-out .25s;
+      }
+    }
+  }
+}
+
+#footer-border {
+  height: 10px;
+  line-height: 1;
+}
