@@ -8,8 +8,8 @@
     <title>@chrisfot</title>
     <link rel="icon" href="images/favicon-fuchsia.png">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css?">
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 
 <body>
@@ -40,10 +40,11 @@
                         <p>I create modern, blazing fast web apps in <strong>php</strong> and <strong>javascript</strong>.</p>
                         <p>I also design clean, minimalistic <strong>UIs</strong> with an emphasis in good <strong>UX</strong>.</p>
                         <p>These days I mostly enjoy working with <strong>Laravel</strong>, <strong>Vue.js</strong> and <strong>SCSS</strong>.</p>
-                        <p>You can find me on Github and LinkedIn or say hi at <a href="mailto:hello@chrisfot.com">hello@chrisfot.com</a>.</p>
+                        <p>You can find me on Github, LinkedIn and Twitter or say hi at <a href="mailto:hello@chrisfot.com">hello@chrisfot.com</a>.</p>
                         <div id="social-media">
                             <a target="_blank" href="https://github.com/chrisfot" title="Find me on Github"><i class="fab fa-fw fa-github"></i></a>
-                            <a target="_blank" href="https://www.linkedin.com/in/chrisfot/" title="Find me on LinkedIn"><i class="fab fa-fw fa-linkedin"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/chrisfot" title="Find me on LinkedIn"><i class="fab fa-fw fa-linkedin"></i></a>
+                            <a target="_blank" href="https://twitter.com/chrisfot" title="Find me on Twitter"><i class="fab fa-fw fa-twitter"></i></a>
                         </div>
                     </article>
                 </div>
@@ -57,35 +58,7 @@
         </div>
     </footer>
 </div>
-<script type="text/javascript">
-    function isAnyPartOfElementInViewport(el) {
-
-        const rect = el.getBoundingClientRect();
-        // DOMRect { x: 8, y: 8, width: 100, height: 100, top: 8, right: 108, bottom: 108, left: 8 }
-        const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-        const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
-
-        // http://stackoverflow.com/questions/325933/determine-whether-two-date-ranges-overlap
-        const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
-        const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
-
-        return (vertInView && horInView);
-    }
-
-    var intro = document.getElementById('introduction-text');
-    var arrowDown = document.getElementById('arrow-down');
-    var arrowUp = document.getElementById('arrow-up');
-
-    window.addEventListener('scroll', function() {
-        if (isAnyPartOfElementInViewport(intro)) {
-            arrowUp.style.display = 'none';
-            arrowDown.style.display = 'block';
-        } else {
-            arrowUp.style.display = 'block';
-            arrowDown.style.display = 'none';
-        }
-    });
-</script>
+<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 
 </html>
