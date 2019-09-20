@@ -66,7 +66,7 @@ strong {
     max-height: 350px;
     border-radius: 50%;
     border: 10px solid #ecf0f1;
-    background-image: url("../images/portrait-small-fuchsia.jpg");
+    background-image: url("../images/portrait-small-fuchsia-compressed.jpg");
     background-position: center;
     background-size: cover; }
   #introduction #introduction-text {
@@ -133,23 +133,17 @@ strong {
 footer {
   height: .25rem; }
 
-@media (max-width: 1400px) and (orientation: portrait) {
+@media (max-width: 1400px) {
   html {
     font-size: 16px; }
 
+  #arrows {
+    display: none; } }
+@media (max-width: 1000px) {
   .row:not(.not-responsive) {
-    flex-direction: column; }
-
-  #arrows {
-    display: none; } }
-@media (max-width: 1400px) and (orientation: landscape) {
-  html {
-    font-size: 16px; }
-
+    flex-direction: column; } }
+@media (max-height: 400px) {
   #about-me {
-    height: 100vh; }
-
-  #arrows {
-    display: none; } }
+    height: 100vh; } }
 
 /*# sourceMappingURL=style.css.map */
