@@ -4,9 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#2e3131">
-    <title>@chrisfot</title>
-    <link rel="icon" href="images/favicon-fuchsia.png">
+
+    <title>Chris Foteinos / Fullstack web developer</title>
+    <meta name="description" content="Fullstack web developer with a passion for modern web apps, beautiful & functional UIs, amazing UX and new technologies. Based in Athens, Greece.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chrisfot.com/">
+    <meta property="og:title" content="Chris Foteinos / Fullstack web developer">
+    <meta property="og:description" content="Fullstack web developer with a passion for modern web apps, beautiful & functional UIs, amazing UX and new technologies. Based in Athens, Greece.">
+    <meta property="og:image" content="https://chrisfot.com/images/meta-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chrisfot.com/">
+    <meta property="twitter:title" content="Chris Foteinos / Fullstack web developer">
+    <meta property="twitter:description" content="Fullstack web developer with a passion for modern web apps, beautiful & functional UIs, amazing UX and new technologies. Based in Athens, Greece.">
+    <meta property="twitter:image" content="https://chrisfot.com/images/meta-image.png">
+
+    <meta name="theme-color" content="#272929">
+
+    <link rel="icon" href="images/favicon-7-128x128.png">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css?">
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
@@ -57,35 +75,7 @@
         </div>
     </footer>
 </div>
-<script type="text/javascript">
-    function isAnyPartOfElementInViewport(el) {
-
-        const rect = el.getBoundingClientRect();
-        // DOMRect { x: 8, y: 8, width: 100, height: 100, top: 8, right: 108, bottom: 108, left: 8 }
-        const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-        const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
-
-        // http://stackoverflow.com/questions/325933/determine-whether-two-date-ranges-overlap
-        const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
-        const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
-
-        return (vertInView && horInView);
-    }
-
-    var intro = document.getElementById('introduction-text');
-    var arrowDown = document.getElementById('arrow-down');
-    var arrowUp = document.getElementById('arrow-up');
-
-    window.addEventListener('scroll', function() {
-        if (isAnyPartOfElementInViewport(intro)) {
-            arrowUp.style.display = 'none';
-            arrowDown.style.display = 'block';
-        } else {
-            arrowUp.style.display = 'block';
-            arrowDown.style.display = 'none';
-        }
-    });
-</script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
