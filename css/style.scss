@@ -91,6 +91,8 @@ strong {
     max-width: 350px;
     border-radius: 50%;
     border: 8px solid $color-light;
+    // Ninja hack to make portrait look straight
+    transform: rotate(-3deg);
   }
 
   #introduction-text {

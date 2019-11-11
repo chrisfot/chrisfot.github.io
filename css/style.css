@@ -63,7 +63,8 @@ strong {
     width: 50%;
     max-width: 350px;
     border-radius: 50%;
-    border: 8px solid #ecf0f1; }
+    border: 8px solid #ecf0f1;
+    transform: rotate(-3deg); }
   #introduction #introduction-text h1 {
     font-size: 4rem; }
     #introduction #introduction-text h1 span {
