@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,800|Patua+One&display=swap");
 html {
-  font-size: 20px;
-  scroll-behavior: smooth; }
+  font-size: 20px; }
 
 body {
   background-color: #ecf0f1;
@@ -51,36 +50,30 @@ strong {
   .row .column {
     display: flex;
     flex-direction: column;
-    flex: 1; }
+    flex: 1 1 50%; }
 
 .align-center {
   align-items: center;
   justify-content: center; }
 
 #introduction {
-  height: 100vh; }
+  height: 100vh;
+  text-align: center; }
   #introduction #introduction-portrait {
-    width: 75vh;
-    height: 75vh;
+    width: 50%;
     max-width: 350px;
-    max-height: 350px;
     border-radius: 50%;
-    border: 10px solid #ecf0f1;
-    background-image: url("../images/portrait-small-fuchsia-compressed.jpg");
-    background-position: center;
-    background-size: cover; }
-  #introduction #introduction-text {
-    text-align: center; }
-    #introduction #introduction-text h1 {
-      font-size: 4rem; }
-      #introduction #introduction-text h1 span {
-        white-space: nowrap;
-        padding: 0 .25em;
-        background-color: #ecf0f1;
-        color: #db0a5b; }
-    #introduction #introduction-text h2 {
-      margin: .6em 0;
-      font-size: 1.25rem; }
+    border: 8px solid #ecf0f1; }
+  #introduction #introduction-text h1 {
+    font-size: 4rem; }
+    #introduction #introduction-text h1 span {
+      white-space: nowrap;
+      padding: 0 .25em;
+      background-color: #ecf0f1;
+      color: #db0a5b; }
+  #introduction #introduction-text h2 {
+    margin: .6em 0;
+    font-size: 1.25rem; }
   #introduction .arrow {
     position: absolute;
     bottom: 0;
@@ -139,9 +132,6 @@ footer {
 
   #arrows {
     display: none; } }
-@media (max-width: 1000px) {
-  .row:not(.not-responsive) {
-    flex-direction: column; } }
 @media (max-height: 400px) {
   #about-me {
     height: 100vh; } }

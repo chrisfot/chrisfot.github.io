@@ -7,7 +7,7 @@ $color-mobile-browser-bar: #272929;
 
 html {
   font-size: 20px;
-  scroll-behavior: smooth; // No support for IE/Edge & Safari currently
+  //scroll-behavior: smooth; // No support for IE/Edge & Safari currently
 }
 
 body {
@@ -73,7 +73,7 @@ strong {
   .column {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 1 1 50%;
   }
 }
 
@@ -84,22 +84,16 @@ strong {
 
 #introduction {
   height: 100vh;
+  text-align: center;
 
   #introduction-portrait {
-    width: 75vh;
-    height: 75vh;
+    width: 50%;
     max-width: 350px;
-    max-height: 350px;
     border-radius: 50%;
-    border: 10px solid $color-light;
-    background-image: url("../images/portrait-small-fuchsia-compressed.jpg");
-    background-position: center;
-    background-size: cover;
+    border: 8px solid $color-light;
   }
 
   #introduction-text {
-    text-align: center;
-
     h1 {
       font-size: 4rem;
 
@@ -207,14 +201,6 @@ footer {
 
   #arrows {
     display: none;
-  }
-
-}
-
-@media (max-width: 1000px) {
-
-  .row:not(.not-responsive) {
-    flex-direction: column;
   }
 
 }
